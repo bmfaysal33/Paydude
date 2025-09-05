@@ -11,14 +11,44 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  
-
-</head>
-  <body>
-    <form>
+  </head>
+  <body
+    class="bg-[#f4f5f7] h-[100vh] flex flex-col justify-center items-center"
+  >
+    <div class="bg-[url(./assets/bg.png)] h-[150px] w-[300px] bg-cover text-center flex flex-col justify-center items-center">
+        <img src="assets/Group.png" class="" alt="">
+    </div>
+    <form class="flex-col bg-white rounded-3xl p-10 w-[350px]">
       <div>
-        <h1>Hey Dude...</h1>
+        <label for="" class="font-bold"> Mobile Number </label>
+        <br />
+        <input
+          type="text"
+          class="bg-[#f4f5f7] input rounded-3xl mb-5"
+          name=""
+          id=""
+          placeholder="Enter your number"
+        />
+      </div>
+
+      <div>
+        <label for="" class="font-bold"> 4 Digit pin </label>
+        <br />
+        <input
+          type="text"
+          class="bg-[#f4f5f7] input rounded-3xl mb-4"
+          name=""
+          id=""
+          placeholder="Enter 4 digit pin"
+        />
+      </div>
+
+      <div>
+        <button class="btn btn-primary w-full font-bold rounded-3xl">
+          Login
+        </button>
       </div>
     </form>
+    <script src="js/index.js"></script>
   </body>
 </html>
