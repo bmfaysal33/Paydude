@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
-     <!-- DaisyUI and Tailwind cdn  -->
+    <!-- DaisyUI and Tailwind cdn  -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -14,31 +14,149 @@
 
     <!-- Font awesome CDN -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-</head>
-<body class="bg-[#f4f5f7] h-[100vh]">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f4f5f7] ">
     <!-- Navigation bar  -->
 
-    <nav class="flex flow-row justify-between items-center border-b-2 border-gray-300 p-4 w-11/12 md:w-[500px] mx-auto my-10">
-        <div class="flex flow-row justify-center items-center">
-            <img src="assets/Group.png" alt="">
-            <div>
-                <h1 class="text-2xl font-bold">$<span>4500</span></h1>
-                <p>Available balance</p>
-
-            </div>
-        </div>
+    <nav
+      class="flex flow-row justify-between items-center border-b-2 border-gray-300 p-4 max-w-lg mx-auto my-10"
+    >
+      <div class="flex flow-row justify-center items-center">
+        <img src="assets/Group.png" alt="" />
         <div>
-            <button class="btn p-6 rounded-lg"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
+          <h1 class="text-2xl font-bold">$<span>4500</span></h1>
+          <p>Available balance</p>
         </div>
+      </div>
+      <div>
+        <button class="btn p-6 rounded-lg">
+          <i class="fa-solid fa-right-from-bracket"></i> Log out
+        </button>
+      </div>
     </nav>
 
     <!-- Feature section  -->
+    <section
+      class="max-w-lg mx-auto flex flex-col justify-center items-center p-4"
+    >
+      <div>
+        <h2 class="text-2xl font-bold">Welcome to Payoo!</h2>
+        <p class="my-4 text-gray-500">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
 
-<script src="js/home.js"></script>
-</body>
+      <!-- Features card here  -->
+      <div class="grid grid-cols-3 grid-rows-2 gap-4">
+        <!-- card 01  -->
+        <div
+          class="cursor-pointer hover:bg-gray-200 bg-white p-6 text-center flex flex-col justify-center items-center rounded-xl"
+        >
+          <img class="bg-cover" src="assets/wallet1.png" alt="" />
+          <p class="mt-2">Add Money</p>
+        </div>
+        <!-- card 02  -->
+        <div
+          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        >
+          <img class="bg-cover" src="assets/send1.png" alt="" />
+          <p class="mt-2">Cashout</p>
+        </div>
+        <!-- card 03  -->
+        <div
+          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        >
+          <img class="bg-cover" src="assets/money1.png" alt="" />
+          <p class="mt-2">Transfer Money</p>
+        </div>
+        <!-- card 04  -->
+        <div
+          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        >
+          <img class="bg-cover" src="assets/bonus1.png" alt="" />
+          <p class="mt-2">Get Bonus</p>
+        </div>
+        <!-- card 05  -->
+        <div
+          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        >
+          <img class="bg-cover" src="assets/purse1.png" alt="" />
+          <p class="mt-2">Pay bill</p>
+        </div>
+        <!-- card 06  -->
+        <div
+          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        >
+          <img class="bg-cover" src="assets/transaction1.png" alt="" />
+          <p class="mt-2">Transactions</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- All form sections  -->
+
+    <section class=" bg">
+      <div class="flex flex-col  justify-center items-center">
+        <h1 class="text-2xl font-bold text-left mb-5 mt-6">Add Money</h1>
+        <form class="flex-col bg-white rounded-3xl p-10 w-[350px] text-left" action="">
+          <label class="font-bold">Select A Bank </label>
+          <select class="select bg-[#f4f5f7] rounded-3xl mb-5">
+            <option disabled selected>Select Bank</option>
+            <option>City Bank</option>
+            <option>AB Bank</option>
+            <option>IFIC Bank</option>
+          </select>
+
+          <label for="" class="font-bold"> Bank Account Number </label>
+          <br />
+          <input
+            type="text"
+            class="bg-[#f4f5f7] input rounded-3xl mb-5"
+            name=""
+            id="number-btn"
+            placeholder="Account number"
+          />
+
+          <label for="" class="font-bold"> Amount to Add </label>
+          <br />
+          <input
+            type="text"
+            class="bg-[#f4f5f7] input rounded-3xl mb-5"
+            name=""
+            id="number-btn"
+            placeholder="Amount"
+          />
+          <label for="" class="font-bold"> Pin Number </label>
+          <br />
+          <input
+            type="text"
+            class="bg-[#f4f5f7] input rounded-3xl mb-5"
+            name=""
+            id="number-btn"
+            placeholder="Enter your Pin"
+          />
+
+          <div>
+        <button id="login-btn" class="btn btn-primary w-full font-bold rounded-3xl">
+         Add Money
+        </button>
+      </div>
+
+        </form>
+      </div>
+    </section>
+
+
+
+
+    <script src="js/home.js"></script>
+  </body>
 </html>
