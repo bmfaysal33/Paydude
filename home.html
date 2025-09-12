@@ -22,7 +22,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#f4f5f7] ">
+  <body class="bg-[#f4f5f7]">
     <!-- Navigation bar  -->
 
     <nav
@@ -31,7 +31,7 @@
       <div class="flex flow-row justify-center items-center">
         <img src="assets/Group.png" alt="" />
         <div>
-          <h1 class="text-2xl font-bold">$<span>4500</span></h1>
+          <h1 class="text-2xl font-bold">$<span id="available-balance">4500</span></h1>
           <p>Available balance</p>
         </div>
       </div>
@@ -103,10 +103,14 @@
 
     <!-- All form sections  -->
 
-    <section class=" bg">
-      <div class="flex flex-col  justify-center items-center">
+    <!-- Add Money form  -->
+    <section class="bg">
+      <div class="flex flex-col justify-center items-center">
         <h1 class="text-2xl font-bold text-left mb-5 mt-6">Add Money</h1>
-        <form class="flex-col bg-white rounded-3xl p-10 w-[350px] text-left" action="">
+        <form
+          class="flex-col bg-white rounded-3xl p-10 w-[350px] text-left"
+          action=""
+        >
           <label class="font-bold">Select A Bank </label>
           <select class="select bg-[#f4f5f7] rounded-3xl mb-5">
             <option disabled selected>Select Bank</option>
@@ -131,7 +135,7 @@
             type="text"
             class="bg-[#f4f5f7] input rounded-3xl mb-5"
             name=""
-            id="number-btn"
+            id="add-amount-input"
             placeholder="Amount"
           />
           <label for="" class="font-bold"> Pin Number </label>
@@ -140,22 +144,72 @@
             type="text"
             class="bg-[#f4f5f7] input rounded-3xl mb-5"
             name=""
-            id="number-btn"
+            id="add-input-pin"
             placeholder="Enter your Pin"
           />
 
           <div>
-        <button id="login-btn" class="btn btn-primary w-full font-bold rounded-3xl">
-         Add Money
-        </button>
-      </div>
-
+            <button
+              id="money-add-btn"
+              class="btn btn-primary w-full font-bold rounded-3xl"
+            >
+              Add Money
+            </button>
+          </div>
         </form>
       </div>
     </section>
 
+    <!-- Cashout Money form  -->
 
 
+    <section class="mb-12">
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-2xl font-bold text-left mb-5 mt-6">Cashout Money</h1>
+        <form
+          class="flex-col bg-white rounded-3xl p-10 w-[350px] text-left"
+          action=""
+        >
+          <label for="" class="font-bold"> Agent Number </label>
+          <br/>
+          <input
+            type="text"
+            class="bg-[#f4f5f7] input rounded-3xl mb-5"
+            name=""
+            id="number-btn"
+            placeholder="Enter 11 digit number"
+          />
+
+          <label for="" class="font-bold"> Amount </label>
+          <br />
+          <input
+            type="text"
+            class="bg-[#f4f5f7] input rounded-3xl mb-5"
+            name=""
+            id="number-btn"
+            placeholder="Enter amount to withdraw"
+          />
+          <label for="" class="font-bold"> Pin Number </label>
+          <br />
+          <input
+            type="text"
+            class="bg-[#f4f5f7] input rounded-3xl mb-5"
+            name=""
+            id="number-btn"
+            placeholder="Enter 4 digit pin number"
+          />
+
+          <div>
+            <button
+              id="login-btn"
+              class="btn btn-primary w-full font-bold rounded-3xl"
+            >
+              Withdraw Money
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <script src="js/home.js"></script>
   </body>
