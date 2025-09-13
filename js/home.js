@@ -1,23 +1,25 @@
 
 
-document.getElementById('money-add-btn').addEventListener('click', function(e){
+document.getElementById('money-add-btn').addEventListener('click', function (e) {
 
-e.preventDefault();
+    e.preventDefault();
 
- const addInputPin = document.getElementById('add-input-pin');
- const amountInput = document.getElementById('add-amount-input');
 
- const pinNum = addInputPin.value;
-const inputAmount = amountInput.value;
+    const pinNum = document.getElementById('add-input-pin').value;
+    const amountInput = parseFloat(document.getElementById('add-amount-input').value);
+    const currentBalance = document.getElementById('available-balance').innerText;
 
-if(pinNum === '1234'){
-     const currentBalance = document.getElementById('available-balance');
-     const balanceNow = parseFloat(currentBalance) + parseFloat(inputAmount);
-     currentBalance.innerText = balanceNow;
+   
+    if (pinNum === '1234') {
 
- }
- else {
-    alert('Invalid pin')
- }
+           const balanceNow = amountInput + parseFloat(currentBalance) ;
+
+            document.getElementById('available-balance').innerText = balanceNow;
+            
+
+    }
+    else {
+        alert('Invalid pin')
+    }
 
 })
