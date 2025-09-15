@@ -57,19 +57,23 @@
       <!-- Features card here  -->
       <div class="grid grid-cols-3 grid-rows-2 gap-4">
         <!-- card 01  -->
-        <div
+        <div 
+         id="add-card"
           class="cursor-pointer hover:bg-gray-200  bg-white p-6 text-center flex flex-col justify-center items-center rounded-xl"
         >
           <img class="bg-cover" src="assets/wallet1.png" alt="" />
           <p class="mt-2">Add Money</p>
         </div>
         <!-- card 02  -->
-        <div
+
+        <div id="cashout-card"
           class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
         >
+
           <img class="bg-cover" src="assets/send1.png" alt="" />
           <p class="mt-2">Cashout</p>
         </div>
+
         <!-- card 03  -->
         <div
           class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
@@ -104,7 +108,7 @@
     <!-- All form sections  -->
 
     <!-- Add Money form  -->
-    <section class="bg">
+    <section id="add-section">
       <div class="flex flex-col justify-center items-center">
         <h1 class="text-2xl font-bold text-left mb-5 mt-6">Add Money</h1>
         <form
@@ -163,7 +167,7 @@
     <!-- Cashout Money form  -->
 
 
-    <section class="mb-12">
+    <section id="cashout-section" class="mb-12 hidden">
       <div class="flex flex-col justify-center items-center">
         <h1 class="text-2xl font-bold text-left mb-5 mt-6">Cashout Money</h1>
         <form

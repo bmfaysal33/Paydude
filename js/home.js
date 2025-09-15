@@ -1,9 +1,6 @@
 
 // Background Green Function 
 
-function makeGreen() {
-    
-}
 
 
 
@@ -14,7 +11,6 @@ document.getElementById('money-add-btn').addEventListener('click', function (e) 
 
     e.preventDefault();
 
-
     const pinNum = document.getElementById('add-input-pin').value;
     const amountInput = parseFloat(document.getElementById('add-amount-input').value);
     const currentBalance = document.getElementById('available-balance').innerText;
@@ -23,7 +19,6 @@ document.getElementById('money-add-btn').addEventListener('click', function (e) 
     if (pinNum !== '1234') {
 
         alert('Invalid pin')
-
 
     }
     else {
@@ -75,3 +70,25 @@ document.getElementById('cashout-login-btn').addEventListener('click', function 
 
 
 
+
+// Toggling Feature 
+
+
+// Show Add money form 
+document.getElementById('add-card').addEventListener('click', function(e){
+        e.preventDefault();
+
+        document.getElementById('cashout-section').style.display = 'none'
+        document.getElementById('add-section').style.display = 'block'
+
+})
+
+// Show Cashout Form 
+
+document.getElementById('cashout-card').addEventListener('click', function(e){
+        e.preventDefault();
+
+        document.getElementById('add-section').style.display = 'none' ;
+        document.getElementById('cashout-section').style.display = 'block' ;
+
+})
