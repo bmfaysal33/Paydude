@@ -31,7 +31,9 @@
       <div class="flex flow-row justify-center items-center">
         <img src="assets/Group.png" alt="" />
         <div>
-          <h1 class="text-2xl font-bold">$<span id="available-balance">45000</span></h1>
+          <h1 class="text-2xl font-bold">
+            $<span id="available-balance">45000</span>
+          </h1>
           <p>Available balance</p>
         </div>
       </div>
@@ -43,6 +45,7 @@
     </nav>
 
     <!-- Feature section  -->
+
     <section
       class="max-w-lg mx-auto flex flex-col justify-center items-center p-4"
     >
@@ -57,47 +60,50 @@
       <!-- Features card here  -->
       <div class="grid grid-cols-3 grid-rows-2 gap-4">
         <!-- card 01  -->
-        <div 
-         id="add-card"
-          class="cursor-pointer hover:bg-gray-200  bg-white p-6 text-center flex flex-col justify-center items-center rounded-xl"
+        <div
+          id="add-card"
+          class="card-btn cursor-pointer hover:bg-gray-200 bg-white  p-6 text-center flex flex-col justify-center items-center rounded-xl"
         >
           <img class="bg-cover" src="assets/wallet1.png" alt="" />
           <p class="mt-2">Add Money</p>
         </div>
         <!-- card 02  -->
 
-        <div id="cashout-card"
-          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        <div
+          id="cashout-card"
+          class="card-btn cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
         >
-
           <img class="bg-cover" src="assets/send1.png" alt="" />
           <p class="mt-2">Cashout</p>
         </div>
 
         <!-- card 03  -->
-        <div
-          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        <div id="transfer-card"
+          class="card-btn cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
         >
           <img class="bg-cover" src="assets/money1.png" alt="" />
           <p class="mt-2">Transfer Money</p>
         </div>
         <!-- card 04  -->
-        <div
-          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        <div id="bonus-card"
+          class="card-btn cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
         >
           <img class="bg-cover" src="assets/bonus1.png" alt="" />
           <p class="mt-2">Get Bonus</p>
         </div>
+
         <!-- card 05  -->
-        <div
-          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+        <div id="pay-bill-card"
+          class="card-btn cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
         >
           <img class="bg-cover" src="assets/purse1.png" alt="" />
           <p class="mt-2">Pay bill</p>
         </div>
         <!-- card 06  -->
+
         <div
-          class="cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
+          id="transactions-card"
+          class="card-btn cursor-pointer hover:bg-gray-200 bg-white p-3 text-center flex flex-col justify-center items-center rounded-xl"
         >
           <img class="bg-cover" src="assets/transaction1.png" alt="" />
           <p class="mt-2">Transactions</p>
@@ -108,7 +114,7 @@
     <!-- All form sections  -->
 
     <!-- Add Money form  -->
-    <section id="add-section">
+    <section class="feature-forms" id="add-section">
       <div class="flex flex-col justify-center items-center">
         <h1 class="text-2xl font-bold text-left mb-5 mt-6">Add Money</h1>
         <form
@@ -166,8 +172,7 @@
 
     <!-- Cashout Money form  -->
 
-
-    <section id="cashout-section" class="mb-12 hidden">
+    <section id="cashout-section" class=" feature-forms mb-12 hidden">
       <div class="flex flex-col justify-center items-center">
         <h1 class="text-2xl font-bold text-left mb-5 mt-6">Cashout Money</h1>
         <form
@@ -175,7 +180,7 @@
           action=""
         >
           <label for="" class="font-bold"> Agent Number </label>
-          <br/>
+          <br />
           <input
             type="text"
             class="bg-[#f4f5f7] input rounded-3xl mb-5"
@@ -212,6 +217,57 @@
             </button>
           </div>
         </form>
+      </div>
+    </section>
+
+
+    <!-- Transfer Money form  -->
+     <section id="transfer-section" class="hidden feature-forms ">
+       <div >
+        <h1 class="font-bold text-2xl">Transfer Money</h1>
+      </div>
+     </section>
+
+
+
+    <!-- Get Bonus form  -->
+     <section id="bonus-section" class="hidden feature-forms ">
+       <div >
+        <h1 class="font-bold text-2xl">Bonus Money</h1>
+      </div>
+     </section>
+
+
+    <!-- Pay bill form  -->
+     <section id="pay-bill-section" class="hidden feature-forms ">
+       <div >
+        <h1 class="font-bold text-2xl">Pay Bill Money</h1>
+      </div>
+     </section>
+
+
+    <!-- Transactions History Div  -->
+
+    <section
+      id="transactions-section"
+      class="feature-forms w-[350px] my-8 mx-auto hidden"
+    >
+      <div class="flex flex-row items-center my-8 justify-between">
+        <h1 class="font-bold text-xl">Transactions</h1>
+        <p class="text-gray-500 font-bold">View All</p>
+      </div>
+
+      <!-- Cards are here  -->
+
+      <div class="p-2 bg-white rounded-xl flex flex-row items-center my-4">
+        <div class="p-3 mr-3 rounded-full bg-[#f4f5f7]">
+          <img src="assets/wallet1.png" alt="" />
+        </div>
+        <div>
+          <h1>Electricity Bill</h1>
+          <p>Today 1:44 pm</p>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical ml-35 text-2xl cursor-pointer "></i>
       </div>
     </section>
 

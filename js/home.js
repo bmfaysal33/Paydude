@@ -3,6 +3,43 @@
 
 
 
+                    //  Reusable functions -Starts Here 
+
+
+// Getting Value 
+function getFloatValue(id) {
+    const getValue = parseFloat(document.getElementById(id).value);
+    return getValue;
+}
+
+// For Toggling Feature 
+
+function toggleForm(id) {
+
+    const formsClass = document.getElementsByClassName("feature-forms");
+
+    for (const forms of formsClass) {
+        forms.style.display = 'none';
+        document.getElementById(id).style.display ='block';
+    }
+
+}
+
+// Make cards Active
+
+    function activeBtn(id){
+         const cards = document.getElementsByClassName('card-btn')
+    for(const card of cards){
+        card.classList.remove('bg-blue-200', 'border-2', 'border-blue-500');
+        card.classList.add('bg-white');
+    }
+     document.getElementById(id).classList.remove('bg-white');
+    document.getElementById(id).classList.add('bg-blue-200', 'border-2', 'border-blue-500');
+    }
+
+
+                    //  Reusable functions -Ends Here 
+
 
 
 // Add Money Feature 
@@ -17,13 +54,10 @@ document.getElementById('money-add-btn').addEventListener('click', function (e) 
 
 
     if (pinNum !== '1234') {
-
         alert('Invalid pin')
-
     }
     else {
         const balanceNow = amountInput + parseFloat(currentBalance);
-
         document.getElementById('available-balance').innerText = balanceNow;
     }
 
@@ -38,7 +72,7 @@ document.getElementById('cashout-login-btn').addEventListener('click', function 
 
     e.preventDefault();
 
-    const cashoutAmount = parseFloat(document.getElementById('cashout-amount').value);
+    const cashoutAmount = getFloatValue("cashout-amount");
 
     const CashoutpinNum = document.getElementById('cashout-pin').value;
 
@@ -48,16 +82,13 @@ document.getElementById('cashout-login-btn').addEventListener('click', function 
 
         alert('Invalid pin')
 
-        // console.log()
-
-
     }
 
 
     else {
         const totalWithdraw = parseFloat(currentBalance) - cashoutAmount;
 
-        if (totalWithdraw < 0) {
+        if (totalWithdraw < 0 || currentBalance < totalWithdraw) {
             alert('Insufficient balance')
             return;
         }
@@ -74,21 +105,75 @@ document.getElementById('cashout-login-btn').addEventListener('click', function 
 // Toggling Feature 
 
 
-// Show Add money form 
-document.getElementById('add-card').addEventListener('click', function(e){
-        e.preventDefault();
+// Show Add money form ---- Old Method
+document.getElementById('add-card').addEventListener('click', function (e) {
+    e.preventDefault();
 
-        document.getElementById('cashout-section').style.display = 'none'
-        document.getElementById('add-section').style.display = 'block'
-
+    toggleForm('add-section');
+    activeBtn('add-card');
+    
 })
+
 
 // Show Cashout Form 
 
-document.getElementById('cashout-card').addEventListener('click', function(e){
-        e.preventDefault();
+document.getElementById('cashout-card').addEventListener('click', function (e) {
+    e.preventDefault();
 
-        document.getElementById('add-section').style.display = 'none' ;
-        document.getElementById('cashout-section').style.display = 'block' ;
+    toggleForm('cashout-section');
+
+   
+    activeBtn('cashout-card');
+   
+
 
 })
+
+
+// Show Transfer Form
+
+document.getElementById('transfer-card').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    toggleForm('transfer-section');
+    activeBtn('transfer-card');
+})
+
+// Show Get Bonus Form
+
+document.getElementById('bonus-card').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    toggleForm('bonus-section');
+    activeBtn('bonus-card');
+})
+
+// Show Pay bill Form
+
+document.getElementById('pay-bill-card').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    toggleForm('pay-bill-section');
+    activeBtn('pay-bill-card');
+})
+
+
+// Show Transactions Form
+
+document.getElementById("transactions-card").addEventListener('click', function (e) {
+
+    e.preventDefault();
+    
+    toggleForm("transactions-section");
+    activeBtn("transactions-card");
+})
+
+
+
+
+
+
+
+
+
+

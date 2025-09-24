@@ -17,6 +17,11 @@ document.getElementById('login').addEventListener('click', function (event) {
             window.location.href= 'home.html'
 
         }
+        else{
+           
+        alert('Invalid pin')
+    
+        }
     
 
     console.log('Button clicked')
