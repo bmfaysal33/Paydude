@@ -40,7 +40,7 @@ function toggleForm(id) {
 
                     //  Reusable functions -Ends Here 
 
-
+const transcationData = []
 
 // Add Money Feature 
 
@@ -59,6 +59,13 @@ document.getElementById('money-add-btn').addEventListener('click', function (e) 
     else {
         const balanceNow = amountInput + parseFloat(currentBalance);
         document.getElementById('available-balance').innerText = balanceNow;
+
+        const data = {
+            name: 'Add Money',
+            date: new Date().toLocaleTimeString()
+        }
+
+        transcationData.push(data);
     }
 
 })
@@ -94,13 +101,50 @@ document.getElementById('cashout-login-btn').addEventListener('click', function 
         }
         else {
             document.getElementById('available-balance').innerText = totalWithdraw;
+            
+        const data = {
+            name: 'Cash Out',
+            date: new Date().toLocaleTimeString()
+        }
+
+        transcationData.push(data);
+
+        console.log(transcationData)
         }
     }
 
 })
 
 
+// Transaction section 
 
+document.getElementById('transactions-card').addEventListener('click', function(e){
+e.preventDefault();
+
+const transactionContainer = document.getElementById('transaction-container');
+    transactionContainer.innerHTML = "";
+    
+for ( const data of transcationData ){
+    const div = document.createElement('div');
+    div.innerHTML =`
+      <div class="p-2 bg-white rounded-xl flex flex-row items-center my-4">
+        <div class="p-3 mr-3 rounded-full bg-[#f4f5f7]">
+          <img src="assets/wallet1.png" alt="" />
+        </div>
+        <div>
+          <h1>${data.name}</h1>
+          <p>${data.date}</p>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical ml-35 text-2xl cursor-pointer "></i>
+      </div>
+    `
+    transactionContainer.appendChild(div)
+}
+
+
+
+
+})
 
 // Toggling Feature 
 
